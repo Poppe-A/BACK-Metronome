@@ -1,0 +1,195 @@
+body
+{
+    width: 100%;
+    margin: 0;
+    background-color: rgb(31, 29, 29);
+}
+
+#bipper-container 
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 25% 25% 25% 25%;
+
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    right: 0%;
+    border-left: solid rgb(126, 126, 126) 1px;
+    padding: 0;
+
+}
+
+#bipper0
+{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#bipper1
+{
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#bipper2
+{
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#bipper3
+{
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.bipper
+{
+    background-color: rgb(36, 36, 36);
+    border: white 1px solid;
+
+}
+.bipper.bipped
+{
+    background-color: rgb(99, 201, 15);
+}
+
+#song-list 
+{
+    position: absolute;
+    top: 10%;
+    width: 300px;
+    padding: 0; 
+}
+.song 
+{
+    list-style-type: none;
+    font-size: 50px;
+    border: solid black 2px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: aliceblue;
+    vertical-align: middle;
+}
+
+.song > div
+{
+    display: inline-block;
+    width: 100%;
+}
+
+.song.selected
+{
+    background-color: red;
+}
+
+.deleteButton{
+    position: absolute;
+    right: -50px;
+    border: solid black 2px;
+    border-radius: 20px;
+    background-color: white;
+    color: red;
+}
+
+#addSongButton
+{
+    position: absolute;
+    top: 10%;
+    right: 25%;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    font-size: 50px;
+}
+
+#songPopup
+{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    margin: 0 auto;
+    width: 300px;
+    z-index: 1000;
+    width: 350px;
+    background-color: gray;
+    visibility: hidden;
+}
+
+#closePopup
+{
+    position: absolute;
+    top: 10px;
+    right:10px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+form {
+    margin-top: 50px;
+    margin-left: auto;
+}
+input {    
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 1024px) 
+{
+    #bipper-container {
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        top: 0%;
+        border-bottom: solid rgb(126, 126, 126) 1px;
+    }
+
+    #song-list {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        width: 80%;
+        height: 880px;
+        margin: auto;
+        overflow: scroll;
+    }
+
+    #songPopup {
+        position: absolute;
+        top: 30%;
+        width: 350px;
+        background-color: gray;
+        z-index: 1000;
+    }
+
+    form {
+        margin-top: 30px;
+        margin-left: auto;
+    }
+    input {    
+        width: 300px;
+        height: 50px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .song {
+        list-style-type: none;
+        font-size: 50px;
+        border: solid black 2px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: aliceblue;
+        height: 100px;
+        line-height: 100px;
+    }
+
+    
+}
